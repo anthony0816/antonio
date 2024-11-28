@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="interactividad.css">
+    <link rel="stylesheet" href= "formulario.css">
+    <link rel="stylesheet" href= "bloque_principal.css">
+    <link rel="stylesheet" href= "@media.css">
+    <script src="/css&.js/validaciones.js"></script>
+    <title>Gestor Asistencia</title>
+</head>
+<body id="body">
+    
+    <form action="" class="form" id="form">
+        <button id="cerrar" style="font-size: 30px; border: none; background-color: transparent;">X</button>
+        <script >
+             document.getElementById('cerrar').onclick = function(){
+            event.preventDefault();
+          
+            document.getElementById('form').style.display="none";
+            document.getElementById('bloquePrincipal').style.display="block";
+               
+              }
+
+        </script>
+
+        <div class="tituloContenedor">
+        <h1 class=" form__titulo"> Insertar Alumno </h1>
+       </div>
+        <div class="form__inputs">
+           
+            <!--Nombre-->
+            <div class="inputs__principal">
+            <label for="inputs__principal__1" class="Etiqueta_estilo"> Nombre </label>
+                <input type="text" id="nombre" placeholder="Antonio Luis Farres Corzo" class="inputs__principal__1" style="margin-top: 8px;" required>
+            
+           
+           <!--Grupo-->
+          
+          
+            <label for="grupo" class="Etiqueta_estilo">Grupo</label>
+            <select name="grupo" id="" class="inputs__principal__2" style="margin-top: 8px;" required>
+                <option value="0"></option>
+                <option value="crear">Crear Grupo ?</option>
+                
+            </select>
+           </div>
+        <!--sexo y Edad-->
+           
+      <div class="inputs__secundario">
+        <div class="inputs__secundario__1" id="sexoContainer">
+            <h2 id="tituloSexo" style="transition: all 0.1s;">Sexo</h2>
+              
+                 <div class="inputs__secundario__1__bloque">
+                    <button name="genero" class="inputs__secundario__1_botones" id="masculino" value="">M</button>
+                    <button name="genero" class="inputs__secundario__1_botones" id="femenino" value="">F</button>
+                    <button name="genero" class="inputs__secundario__1_botones" id="otro" value="">...</button>
+                 </div>
+                  
+                   <script>
+                   
+                    
+                   </script>
+            </div>
+              
+            <div class="inputs__secundario__2" >
+                 <h2 id="tituloEdad" style="margin-top: 25px;">Edad</h2>
+              <input type="Text" id = "edad" required style=" padding: 0 8px; width: 60px; height: 37px; background-color: transparent ; border: none ; border: 2px solid #c58210 ; border-radius: 4px;" >
+              </div>
+          
+      </div>
+        </div>
+        <div class="bloqueEnviar" id="enviar">
+            <button class="botonEnviar " >Enviar</button>
+        </div>
+    </form>
+  
+                                <!--FIN FORMULARIO-->
+
+   <div class="Bloque_menu_principal" id="bloquePrincipal"> 
+      <div class="bloque_botones bloque_titulo">
+        <h1 class="titulo_bloque_principal" >Gestionar Asistencia</h1>
+      </div>
+      <div class="bloque_botones">
+        <button class="botones_menu_principal">
+            <h2>Tomar Asistencia</h2>
+        </button>
+      </div>
+      <div class="bloque_botones" >
+        
+        <button id="boton" class="botones_menu_principal"> <h2>Insertar Estudiante </h2>
+            <script>
+                let boton = document.getElementById('boton') 
+                boton.onclick = function(){
+                   document.getElementById('form').style.display = "block";
+                   document.getElementById('bloquePrincipal').style.display="none";
+                    }
+            </script>
+            
+        </button>
+        
+       </div>
+       <div class="bloque_botones">
+        <button class="botones_menu_principal"><h2>Mostrar Asistencia</h2></button>
+       </div>
+       <div class="bloque_botones">
+        <button class="botones_menu_principal"><h2 style="color: #aaa;">Crear Grupo</h2></button>
+       </div>
+       <div class="bloque_botones">
+        <button class="botones_menu_principal"><h2>Mas Opciones</h2></button>
+       </div>
+   </div><!--Div Primcipal-->
+   <style>
+    .Etiqueta_estilo:hover{
+color: rgb(205, 205, 205);
+}
+#cerrar{
+    position: absolute;
+    right: 2px;
+    
+}
+#cerrar:hover{
+    color: #aaa;
+    border: #aaa;
+    transition: all 0.2s;
+}
+
+.botonEnviar:active{
+    transition: all 0.2s;
+    transform: scale(0.8);
+    
+}
+.botonEnviar:hover{
+    background-color: #976309;
+}
+.inputs__secundario__1_botones:hover{
+   transition: all 0.2s;
+   transform: scale(1.05);
+}
+.inputs__secundario__1_botones:active{
+    transition: all 0.1 s;
+   transform: scale(0.95);
+}
+
+/*Bloque principal configuraciones*/
+
+.botones_menu_principal:hover{
+transition: all 0.15s;
+background-color: #414141;
+}
+.botones_menu_principal:active{
+    transition: all 0.10s;
+    transform: scale(0.95);
+}
+
+body{
+    background-color: #333;
+    font-family: sans-serif;
+    color: #ccc;
+}
+input{
+    color: #ddd; 
+    font-size: 16px;
+    
+}
+h1{
+    color: black;
+}
+h2{
+    color: #c58210;
+}
+select{
+    color: #ddd;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+option{
+    color: #c58210;
+    transition: all 0.2s;
+    
+}
+.Etiqueta_estilo{
+    color: #c58210;
+}
+
+
+.form{
+    display: none;
+    z-index: 1;
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #222;
+    padding-bottom: 20px;
+    max-width: 800px;
+    width: 95%;
+    
+    border-radius: 10px;
+    
+}
+
+.tituloContenedor{
+background-color: #c58210;
+    padding: 1px;
+    color: #222;
+    border-radius: 10px;
+}
+.form__titulo{
+    background-color: transparent;
+    text-align: center;
+    
+}
+.form__inputs{
+background-color: transparent;
+padding: 30px;
+margin: 0 10px; 
+
+}
+.inputs__principal{
+    background-color: transparent;
+    padding: 5px 10px;
+    padding-bottom: 20px;
+    max-width: 700px;
+    margin: auto;
+    
+}
+.inputs__principal__1{
+width: 100%;
+box-sizing: border-box;
+padding: 10px 6px ;
+border: none;
+border-left: 10px solid #c58210;
+border-radius: 9px;
+margin-bottom: 9px;
+background-color: #222;
+box-shadow: 0 0 15px black;
+transition: all 0.2s;
+}
+.inputs__principal__1::placeholder{
+    color: rgb(144, 144, 144);
+}
+.inputs__principal__2{
+width: 100%;
+box-sizing: border-box;
+padding: 10px 0;
+border-radius: 9px;
+border: none;
+border-left: 10px solid #c58210;
+background-color: #222;
+box-shadow: 0 0 15px black;
+}
+
+.inputs__secundario{
+   margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+   
+}
+.inputs__secundario__1__bloque{
+    display: flex;
+    justify-content: space-around;
+}
+
+.inputs__secundario__1{
+    
+    background-color: #222;
+    text-align: center;
+    width: 280px;
+    border-radius: 10px;
+    padding: 4px;
+    margin-left: 8px;
+    height: 120px;
+    box-shadow: 0 0 15px black;
+    box-sizing: border-box;
+}
+.inputs__secundario__1_botones{
+    width: 30%;
+    height: 40px;
+    border: none;
+    background-color: #c58210;
+    color: #222;
+    font-size: 20px;
+    border-radius: 4px;
+}
+.inputs__secundario__2{
+    background-color: #222;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    width: 280px;
+    height: 120px;
+    box-shadow: 0 0 15px black;
+    box-sizing: border-box;
+}
+
+.bloqueEnviar{
+    display: flex;
+    justify-content: center;
+}
+
+.botonEnviar{
+    
+    border: none;
+    border: 3px solid #c58210;
+    border-radius: 10px;
+    padding: 9px 10px;
+    font-size: 20px;
+    color: #020202;
+    font-weight: 600;
+    background-color:  #c58210;
+}
+
+.Bloque_menu_principal{
+ margin: auto;
+ margin-top: 30px;
+ border-radius: 10px;
+ padding-bottom: 20px;
+ max-width: 400px;
+ background-color: #222;
+ 
+}
+
+.bloque_botones{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.botones_menu_principal{
+   width: 300px; 
+   color: #ddd;    
+   background-color: #222;
+   padding: 7px 15px;
+   border: none;
+   border: 2px solid 
+    #c58210;
+   border-radius: 10px;
+}
+.bloque_titulo{
+    background-color: #c58210;
+    border-radius: 10px;
+    padding: 1px;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+/*Estilo de botones y Titulos*/
+.titulo_bloque_principal{
+    font-family: sans-serif;
+    color:#222;
+}
+
+@media screen and (max-width: 713px){
+    .form{
+        margin-top: 2px;
+    }
+    inputs__secundario{
+        margin-top:5px;
+    }
+   .inputs__secundario__1{
+    width: 150px ;
+   }
+    .inputs__secundario__2{
+    width: 150px;
+   }
+}
+@media screen and (max-width: 464px){
+ .inputs__principal{
+   padding: 0 0;
+ }
+ .inputs__principal__1,.inputs__principal__2{
+   padding: 17px 7px;
+ }
+ .inputs__secundario{
+   display: block;
+   }
+
+ #tituloSexo{
+    margin-top: 2px;
+}
+#tituloEdad{
+  padding: 4px; 
+}
+ .inputs__secundario__1{
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    
+ }
+ .inputs__secundario__2{
+    width: 100%;
+   height: 100px;
+   margin: auto;
+    
+    
+ }
+ 
+}
+   </style>
+   <script>
+    // Verificación CAMPO TEXTO 
+var formulario = document.getElementById('form');
+var color;
+var borderLeftColor;
+var texto;
+var tamaño ;
+var border;
+
+const verificarNombre = (event) => {
+    let numeros = /^[a-zA-Z\s]+$/;
+
+    let etiqueta = document.getElementById('nombre');
+    
+    if (!(numeros.test(etiqueta.value))||(/^\s*$/.test(etiqueta.value))){
+       
+        borderLeftColor = etiqueta.style.borderLeft; 
+        color = etiqueta.style.color;
+        texto = etiqueta.value;
+        
+        etiqueta.value = "Nombre Incorrecto caracteres especiales no admitidos(123$%..)"
+        etiqueta.style.color="red"
+        etiqueta.style.borderLeft ='10px solid red';
+        etiqueta.style.transform ='scale(1.05)'
+        event.preventDefault(); // 
+    }
+}
+
+document.getElementById('form').addEventListener('submit', function(event) {
+    verificarNombre(event); // Referencia correcta a la función
+});
+
+// Quitar el error 
+document.getElementById('nombre').addEventListener('click', function(event){
+    let etiqueta = document.getElementById('nombre');
+    etiqueta.style.color= color;
+    etiqueta.style.borderLeft= borderLeftColor;
+    if (etiqueta.value =="Nombre Incorrecto caracteres especiales no admitidos(123$%..)") {
+        etiqueta.value= "";
+    }
+    etiqueta.style.transform='scale(1.0)'
+});
+
+// Verificar Campo Edad 
+document.addEventListener('submit' , function(event){
+    let edad = document.getElementById('edad');
+    let titulo = document.getElementById('tituloEdad');
+    if(!(/\d/.test(edad.value))){
+        
+        tamaño = edad.style.width;
+        border = edad.style.border;
+        color = titulo.style.color;
+
+        edad.style.transition='all 0.1s';
+        edad.style.width ="77px"
+        edad.style.border= '3px solid red';
+        edad.value="INVALIDO"
+        titulo.style.color="red";
+        
+        event.preventDefault();
+    }
+})
+
+document.getElementById('edad').addEventListener('click', function(event){
+    edad.style.transition='all 0.1s';
+    edad.style.width = tamaño;
+    edad.style.border= border;
+    
+    if (edad.value == "INVALIDO") {
+        edad.value="";
+    }
+    document.getElementById('tituloEdad').style.color= color;
+} )
+
+//Validar Sexo
+
+formulario.addEventListener('submit', function(event){
+   
+    let masculino = document.getElementById('masculino');
+    let femenino = document.getElementById('femenino');
+    let orto = document.getElementById('otro');
+
+    if((masculino.value == "")&&(femenino.value == "")&&(orto.value == "")){
+        color = document.getElementById('tituloSexo').style.color;
+
+        document.getElementById('tituloSexo').style.color="red";
+        document.getElementById('sexoContainer').style.border="2px solid red";
+        event.preventDefault();
+   }
+
+})
+let backgroundColor;
+let Sborder;
+let Scolor;
+let masculino = document.getElementById('masculino');
+let femenino = document.getElementById('femenino');
+let otro = document.getElementById('otro');
+
+masculino.onclick = function(event){
+event.preventDefault();
+if(masculino.value == "M") return 0;
+masculino.value="M";
+femenino.value=null;
+otro.value=null;
+backgroundColor = masculino.style.backgroundColor;
+Sborder = masculino.style.border;
+Scolor  = masculino.style.color;
+
+masculino.style.transition="all 0.2s";
+masculino.style.backgroundColor="#222";
+masculino.style.border="2px solid #c58210";
+masculino.style.color = "#aaa";
+
+femenino.style.backgroundColor = backgroundColor;
+femenino.style.border = Sborder;
+femenino.style.color = Scolor;
+
+otro.style.backgroundColor = backgroundColor;
+otro.style.border = Sborder;
+otro.style.color = Scolor;
+
+document.getElementById('tituloSexo').style.color= color;
+document.getElementById('sexoContainer').style.border= "none";
+}
+
+femenino.onclick = function(event){
+    event.preventDefault();
+    if(femenino.value == "F") return 0;
+    masculino.value=null;
+    femenino.value="F";
+    otro.value=null;
+    backgroundColor = femenino.style.backgroundColor;
+    Sborder = femenino.style.border;
+    Scolor = femenino.style.color;
+    
+    femenino.style.transition="all 0.2s";
+    femenino.style.backgroundColor="#222";
+    femenino.style.border="2px solid #c58210";
+    femenino.style.color = "#aaa";
+    
+    masculino.style.backgroundColor = backgroundColor;
+    masculino.style.border = Sborder;
+    masculino.style.color = Scolor;
+    
+    otro.style.backgroundColor = backgroundColor;
+    otro.style.border = Sborder;
+    otro.style.color = Scolor;
+    
+    document.getElementById('tituloSexo').style.color= color;
+    document.getElementById('sexoContainer').style.border= "none";
+    }
+
+    otro.onclick = function(event){
+        event.preventDefault();
+        if(otro.value == "otro") return 0;
+        masculino.value=null;
+        femenino.value=null;
+        otro.value="otro";
+        backgroundColor = otro.style.backgroundColor;
+        Sborder = otro.style.border;
+        Scolor = otro.style.color;
+
+        otro.style.transition="all 0.2s";
+        otro.style.backgroundColor="#222";
+        otro.style.border="2px solid #c58210";
+        otro.style.color = "#aaa";
+        
+        femenino.style.backgroundColor = backgroundColor;
+        femenino.style.border = Sborder;
+        femenino.style.color = Scolor;
+        
+        masculino.style.backgroundColor = backgroundColor;
+        masculino.style.border = Sborder;
+        masculino.style.color =Scolor;
+        
+        document.getElementById('tituloSexo').style.color= color;
+        document.getElementById('sexoContainer').style.border= "none";
+        }
+            
+
+
+
+
+
+   </script>
+</body>
+</html>

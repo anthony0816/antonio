@@ -1,0 +1,40 @@
+.Bloque_menu_principal{
+ margin: auto;
+ margin-top: 30px;
+ border-radius: 10px;
+ padding-bottom: 20px;
+ max-width: 400px;
+ background-color: #222;
+ 
+}
+
+.bloque_botones{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.botones_menu_principal{
+   width: 300px; 
+   color: #ddd;    
+   background-color: #222;
+   padding: 7px 15px;
+   border: none;
+   border: 2px solid 
+    #c58210;
+   border-radius: 10px;
+}
+.bloque_titulo{
+    background-color: #c58210;
+    border-radius: 10px;
+    padding: 1px;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+/*Estilo de botones y Titulos*/
+.titulo_bloque_principal{
+    font-family: sans-serif;
+    color:#222;
+}
+

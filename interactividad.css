@@ -1,0 +1,42 @@
+.Etiqueta_estilo:hover{
+color: rgb(205, 205, 205);
+}
+#cerrar{
+    position: absolute;
+    right: 2px;
+    
+}
+#cerrar:hover{
+    color: #aaa;
+    border: #aaa;
+    transition: all 0.2s;
+}
+
+.botonEnviar:active{
+    transition: all 0.2s;
+    transform: scale(0.8);
+    
+}
+.botonEnviar:hover{
+    background-color: #976309;
+}
+.inputs__secundario__1_botones:hover{
+   transition: all 0.2s;
+   transform: scale(1.05);
+}
+.inputs__secundario__1_botones:active{
+    transition: all 0.1 s;
+   transform: scale(0.95);
+}
+
+/*Bloque principal configuraciones*/
+
+.botones_menu_principal:hover{
+transition: all 0.15s;
+background-color: #414141;
+}
+.botones_menu_principal:active{
+    transition: all 0.10s;
+    transform: scale(0.95);
+}
+

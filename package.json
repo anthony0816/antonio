@@ -1,0 +1,19 @@
+{
+  "name": "mi-proyecto-de-servidor",
+  "version": "1.0.0",
+  "main": "validaciones.js",
+  "scripts": {
+    "star": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
